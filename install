@@ -27,7 +27,7 @@ if [ -z "${ENVIRONMENT+x}" ]; then
   usage
 fi
 
-# get working working directory
+# get working directory
 cd $(dirname "${BASH_SOURCE[0]}")
 project_root_dir="$(pwd)"
 
@@ -36,7 +36,7 @@ if [ -z "${PROJECT_NAME+x}" ]; then
   PROJECT_NAME="$(basename "$project_root_dir")"
 fi
 
-# get composer if not already downloadeded
+# get composer if not already downloaded
 if [ ! -f composer.phar ]; then
   wget https://getcomposer.org/download/1.2.0/composer.phar
 fi
